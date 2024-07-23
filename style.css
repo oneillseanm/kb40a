@@ -23,10 +23,18 @@ section.pageDivision {
 	border-style: solid;
 	border-width: 0 0 1px 0;
 	margin: 0;
-	padding: 90px 0 0 0;
+	padding: 120px 0 0 0;
 }
 
-section.subSection {
+section.feature {
+	padding: 0 0 90px 0;
+}
+
+section.technical {
+	padding: 0 0 30px 0;
+}
+
+section.technical.lastTechnical {
 	padding: 0 0 90px 0;
 }
 
@@ -44,8 +52,18 @@ p, h1, h2, h3 {
 	margin: 0;
 }
 
-.subSection h2, .subSection p, .subSection ul {
+#techSpecs h2 {
+	padding-bottom: 60px;
+}
+
+.subSection.feature h2, .subSection.feature h3, .subSection.feature p, .subSection.feature ul {
 	text-align: center;
+}
+
+.featureList {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 30px;
 }
 
 a {
@@ -55,6 +73,10 @@ a {
 
 nav a {
 	text-decoration: none;
+}
+
+nav li {
+	padding-right: 30px;
 }
 
 a:hover {
@@ -71,6 +93,7 @@ h1 {
 	grid-column-start: 1;
 	grid-column-end: 4;
 	display: grid;
+	text-align: center;
 }
 
 .logoDot {
@@ -92,18 +115,30 @@ h3 {
 }
 
 ul {
-	padding: 0;
-	margin: 0 0 18px 0;
+	padding: 0 0 18px 0;
+	margin: 0;
 }
 
 li {
-	padding: 0 0 12px 0;
+	padding-bottom: 12px;
 	list-style-type: none;
+}
+
+.stepComplete {
+	text-decoration: line-through;
+}
+
+.stepUpcoming {
+	color: rgb(170,170,170);
 }
 
 body section table {
 	margin: 0 0 18px 0;
 	display: grid;
+}
+
+table {
+	grid-template-columns: 1fr 1fr;
 }
 
 thead, tbody, tr {
@@ -128,72 +163,70 @@ img {
 
 @media only screen and (min-width: 500px) {
 	
-	table {
-		grid-template-columns: 1fr 1fr;
-	}
-	
-	.image-grid {
-		grid-template-columns: 1fr 1fr;
-	}
-	
-}
-	
 @media only screen and (min-width: 700px) {
 
 	section, header {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 		grid-template-rows: auto;
 		grid-row-gap: 0;
 	}
 
 	nav {
 		float: right;
-		grid-column-start: 2;
-		grid-column-end: 4;
+		grid-column-start: 3;
+		grid-column-end: 7;
 		justify-content: flex-end;
 	}
 	
-	nav li {
-		padding-left: 12px;
+	.subSection.feature, .feature ul, .feature div, .title, .subSection.technical {
+		grid-column-start: 1;
+		grid-column-end: 7;
+	}
+	
+	.feature p {
+		display: grid;
+		grid-column-start: 2;
+		grid-column-end: 6;
+	}
+	
+	.technical p {
+		grid-column-start: 1;
+		grid-column-end: 5;
 	}
 	
 	h1 {
 		grid-column-start: 1;
-		grid-column-end: 2;
+		grid-column-end: 3;
 	}
 
 	h2, h3 {
 		grid-column-start: 1;
-		grid-column-end: 6;
+		grid-column-end: 7;
 	}
 	
-	p {
+	.technical h3 {
 		grid-column-start: 1;
 		grid-column-end: 3;
-	}	
-
-	ul {
+	}
+	
+	.technical div, .technical ul, .technical table {
 		display: grid;
-		grid-column-start: 2;
-		grid-column-end: 3;
+		grid-column-start: 3;
+		grid-column-end: 7;
 	}
 	
 	.featureList {
 		grid-column-start: 1;
-		grid-column-end: 4;
+		grid-column-end: 7;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
+	
+	.featureList ul {
+		text-align: center;
+		padding: 0;
+	}
 
-	li {
-		display: inline-flex;
-		padding: 0 0 12px 0;
-	}
-	
-	.itemList li {
-		display: block;
-	
-	}
 	.featureList li {
 		padding: 0 0 30px 0;
 	}
@@ -210,57 +243,8 @@ img {
 		grid-template-columns: 1fr 1fr;
 	}
 
-	.image-grid {
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	}
-	
 	img {
 		display: block;
-	}
-
-	.full {
-		grid-column-start: 1;
-		grid-column-end: 4;
-		margin: 60px 0;
-	}
-	
-	.left23 {
-		grid-column-start: 1;
-		grid-column-end: 3;
-	}
-
-	.right23 {
-		grid-column-start: 2;
-		grid-column-end: 4;
-	}
-	
-	div.right23, div.left23 {
-		margin-bottom: 120px;
-	}
-	
-	a.full, p.full {
-		grid-column-start: 1;
-		grid-column-end: 4;
-	}
-	
-	a.right-13, p.right-13 {
-		grid-column-start: 3;
-		grid-column-end: 4;
-	}
-	
-	a.right-23, p.right-23 {
-		grid-column-start: 2;
-		grid-column-end: 4;
-	}
-	
-	a.left-13, p.left-13 {
-		grid-column-start: 1;
-		grid-column-end: 2;
-	}
-	
-	a.left-23, p.left-23 {
-		grid-column-start: 1;
-		grid-column-end: 3;
 	}
 
 }
@@ -268,9 +252,9 @@ img {
 @media only screen and (min-width: 900px) {
 
 	body {
-		width: 800px;
+		width: 840px;
 		margin: auto;
-		padding: 50px;
+		padding: 30px;
 	}
 
 	.image-grid {
