@@ -9,24 +9,25 @@ body {
 	font-style: normal;
 }
 
-img {
-	width: 100%;
-	height: auto;
-	object-fit: contain;
-	margin: 0;
-}
-
 header {
 	border-style: solid;
 	border-width: 0 0 1px 0;
-	padding: 0 0 30px 0;
+	padding: 0;
 }
 
-section {
+nav {
+	padding: 0 0 60px 0;
+}
+
+section.pageDivision {
 	border-style: solid;
 	border-width: 0 0 1px 0;
 	margin: 0;
-	padding: 60px 0;
+	padding: 90px 0 0 0;
+}
+
+section.subSection {
+	padding: 0 0 90px 0;
 }
 
 footer {
@@ -39,7 +40,25 @@ p, h1, h2, h3, a, li, table {
 }
 
 p, h1, h2, h3 {
-	margin: 0 0 30px 0;
+	padding: 0 0 30px 0;
+	margin: 0;
+}
+
+.subSection h2, .subSection p, .subSection ul {
+	text-align: center;
+}
+
+a {
+	color: rgb(65,65,65);
+	text-decoration: underline;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: rgba(0,0,0,.05)
 }
 
 h1 {
@@ -49,7 +68,6 @@ h1 {
 .title {
 	font-size: 48px;
 	line-height: 60px;
-	margin: 60px 0;
 	grid-column-start: 1;
 	grid-column-end: 4;
 	display: grid;
@@ -96,17 +114,16 @@ td {
 	padding: 0 30px 12px 0;
 }
 
-a {
-	color: rgb(65,65,65);
-	text-decoration: none;
+div {
+	padding: 0 0 30px 0;
+	margin: 0;
 }
 
-a:hover {
-	background-color: rgba(0,0,0,.05)
-}
-
-section a {
-	text-decoration: underline;
+img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	margin: 0;
 }
 
 @media only screen and (min-width: 500px) {
@@ -135,6 +152,10 @@ section a {
 		grid-column-start: 2;
 		grid-column-end: 4;
 		justify-content: flex-end;
+	}
+	
+	nav li {
+		padding-left: 12px;
 	}
 	
 	h1 {
@@ -167,10 +188,6 @@ section a {
 	li {
 		display: inline-flex;
 		padding: 0 0 12px 0;
-	}
-	
-	nav li {
-		padding-left: 12px;
 	}
 	
 	.itemList li {
