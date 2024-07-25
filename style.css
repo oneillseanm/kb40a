@@ -10,8 +10,6 @@ body {
 }
 
 header {
-	border-style: solid;
-	border-width: 0 0 1px 0;
 	padding: 0;
 }
 
@@ -22,24 +20,60 @@ nav {
 section.pageDivision {
 	border-style: solid;
 	border-width: 0 0 1px 0;
-	margin: 0;
-	padding: 120px 0 0 0;
+	margin: 0 0 120px 0;
+	padding: 0 0 120px 0;
 }
 
-section.feature {
-	padding: 0 0 90px 0;
-}
-
-section.technical {
+#development section {
 	padding: 0 0 30px 0;
 }
 
-section.technical.lastTechnical {
-	padding: 0 0 90px 0;
+#development h3, #development ul, #development div {
+	text-align: center;
 }
 
-footer {
-	padding: 30px 0 0 0;
+#features {
+	padding-bottom: 30px;
+}
+
+#features section {
+	padding: 0 0 120px 0;
+}
+
+#features h3, #features ul {
+	text-align: center;
+}
+
+#techSpecs section {
+	padding: 0 0 30px 0;
+}
+
+#about section, #newsletter section {
+	padding-bottom: 30px;
+}
+
+#about h3, #newsletter h3 {
+	text-align: center;
+}
+
+#newsletter div {
+	padding-bottom: 0;
+	margin: 0 auto 30px auto;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(65,65,65);
+	border-radius: 5px;
+	background-color: rgb(255,255,255);
+	width: 75%;
+	height: auto;
+	text-align: center;
+}
+
+#newsletter div p {
+	display: inline-block;
+	line-height: 40px;
+	padding-bottom: 0;
+	color: rgb(170,170,170);
 }
 
 p, h1, h2, h3, a, li, table {
@@ -47,23 +81,15 @@ p, h1, h2, h3, a, li, table {
 	line-height: 30px;
 }
 
-p, h1, h2, h3 {
+p, h1, h3 {
 	padding: 0 0 30px 0;
 	margin: 0;
 }
 
-#techSpecs h2 {
-	padding-bottom: 60px;
-}
-
-.subSection.feature h2, .subSection.feature h3, .subSection.feature p, .subSection.feature ul {
+h2 {
+	padding: 0 0 60px 0;
+	margin: 0;
 	text-align: center;
-}
-
-.featureList {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 30px;
 }
 
 a {
@@ -90,9 +116,6 @@ h1 {
 .title {
 	font-size: 48px;
 	line-height: 60px;
-	grid-column-start: 1;
-	grid-column-end: 4;
-	display: grid;
 	text-align: center;
 }
 
@@ -115,12 +138,12 @@ h3 {
 }
 
 ul {
-	padding: 0 0 18px 0;
+	padding: 0 0 20px 0;
 	margin: 0;
 }
 
 li {
-	padding-bottom: 12px;
+	padding-bottom: 10px;
 	list-style-type: none;
 }
 
@@ -132,12 +155,9 @@ li {
 	color: rgb(170,170,170);
 }
 
-body section table {
-	margin: 0 0 18px 0;
-	display: grid;
-}
-
 table {
+	display: grid;
+	margin: 0 0 20px 0;
 	grid-template-columns: 1fr 1fr;
 }
 
@@ -146,7 +166,7 @@ thead, tbody, tr {
 }
 
 td {
-	padding: 0 30px 12px 0;
+	padding: 0 30px 10px 0;
 }
 
 div {
@@ -165,81 +185,121 @@ img {
 	
 @media only screen and (min-width: 700px) {
 
-	section, header {
+	.gridHeader	{ grid-area: header; }
+	.gridText	{ grid-area: text; }
+	.gridImage	{ grid-area: image; }
+	.gridList	{ grid-area: list; }
+	
+	header {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 		grid-template-rows: auto;
 		grid-row-gap: 0;
+		grid-template-areas:
+			'header list' ;
 	}
 
 	nav {
-		float: right;
-		grid-column-start: 3;
-		grid-column-end: 7;
 		justify-content: flex-end;
 	}
 	
-	.subSection.feature, .feature ul, .feature div, .title, .subSection.technical {
-		grid-column-start: 1;
-		grid-column-end: 7;
-	}
-	
-	.feature p {
-		display: grid;
-		grid-column-start: 2;
-		grid-column-end: 6;
-	}
-	
-	.technical p {
-		grid-column-start: 1;
-		grid-column-end: 5;
-	}
-	
-	h1 {
-		grid-column-start: 1;
-		grid-column-end: 3;
-	}
-
-	h2, h3 {
-		grid-column-start: 1;
-		grid-column-end: 7;
-	}
-	
-	.technical h3 {
-		grid-column-start: 1;
-		grid-column-end: 3;
-	}
-	
-	.technical div, .technical ul, .technical table {
-		display: grid;
-		grid-column-start: 3;
-		grid-column-end: 7;
-	}
-	
-	.featureList {
-		grid-column-start: 1;
-		grid-column-end: 7;
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-	
-	.featureList ul {
-		text-align: center;
-		padding: 0;
-	}
-
-	.featureList li {
-		padding: 0 0 30px 0;
-	}
-
 	nav ul {
 		display: inline-flex;
 		float: right;
 	}
+
+	#development {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+		
+	#development section, #development h2 {
+		display: block;
+		grid-column-start: 2;
+		grid-column-end: 5;
+		text-align: center;
+	}
 	
+	#features section {
+		display: grid;
+	}
+	
+	.fullWidth {
+		grid-template-areas:
+			'header header header header header'
+			'. text text text .'
+			'image image image image image' ;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+	
+	.fullWidth h2 {
+		text-align: center;
+	}
+	
+	.leftAligned {
+		grid-template-areas:
+			'header image image'
+			'text image image'
+			'. image image' ;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	
+	#features .leftAligned h3 {
+		text-align: left;
+		padding-right: 60px;
+	}
+	
+	.leftAligned p {
+		padding-right: 60px;
+	}
+	
+	.rightAligned {
+		grid-template-areas:
+			'image image header'
+			'image image text'
+			'image image .';
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	
+	#features .rightAligned h3 {
+		text-align: left;
+		padding-left: 60px;
+	}
+	
+	.rightAligned p {
+		padding-left: 60px;
+	}
+	
+	#features .featureList {
+		display: block;
+	}
+	
+	.featureList ul{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		padding-bottom: 0;
+	}
+	
+	.featureList li {
+		padding-bottom: 30px;
+	}
+	
+	#techSpecs section {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+	
+	#about, #newsletter {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+	
+	#about section, #newsletter section {
+		grid-column-start: 2;
+		grid-column-end: 5;
+	}
+
 	table {
 		display: grid;
-		grid-column-start: 2;
-		grid-column-end: 4;
 		grid-template-columns: 1fr 1fr;
 	}
 
