@@ -39,8 +39,8 @@ footer {
 }
 
 p, h1, h2, h3, a, li, table {
-	font-size: 24px;
-	line-height: 30px;
+	font-size: 20px;
+	line-height: 24px;
 }
 
 p, h1, h3 {
@@ -305,6 +305,11 @@ img {
 		grid-row-gap: 0;
 		grid-template-areas:
 			'header list' ;
+	}
+
+	p, h1, h2, h3, a, li, table {
+		font-size: 24px;
+		line-height: 30px;
 	}
 
 	nav {
