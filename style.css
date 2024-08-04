@@ -17,11 +17,24 @@ nav {
 	padding: 0 0 60px 0;
 }
 
+nav a {
+	text-decoration: none;
+}
+
+nav li {
+	padding-right: 0;
+}
+
 section.pageDivision {
 	border-style: solid;
+	border-color: rgb(180,180,180);
 	border-width: 0 0 1px 0;
-	margin: 0 0 60px 0;
-	padding: 0 0 120px 0;
+	margin: 0;
+	padding: 60px 0 120px 0;
+}
+
+footer {
+	padding-top: 60px;
 }
 
 p, h1, h2, h3, a, li, table {
@@ -74,33 +87,42 @@ h3 {
 	padding-bottom: 150px;
 }
 
+#techSpecs {
+	background-color: rgb(241,241,241);
+}
+
+#techSpecs h2, #techSpecs h3, #techSpecs div, #techSpecs ul, #techSpecs table {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 #techSpecs section {
 	padding: 0 0 30px 0;
 }
 
-#about section, #newsletter section {
+#about section, #contact section {
 	padding-bottom: 30px;
 }
 
-#newsletter .fieldContainer {
+#contact .fieldContainer {
 	display: flex;
 }
 
-#newsletter .field {
+#contact .field {
 	display: inline-flex;
 	padding-bottom: 0;
 	margin: 0 15px 30px 0;
 	border-style: solid;
 	border-width: 1px;
-	border-color: rgb(65,65,65);
+	border-color: rgb(80,80,80);
 	border-radius: 0;
 	background-color: rgb(255,255,255);
 	width: 50%;
 	height: 40px;
-	box-shadow: 5px 5px 0 rgb(110,110,110);
+	box-shadow: 5px 5px 0 rgb(120,120,120);
 }
 
-#newsletter .field p {
+#contact .field p {
 	display: inline-block;
 	line-height: 40px;
 	padding: 0 0 0 10px;
@@ -108,29 +130,29 @@ h3 {
 	font-size: 18px;
 }
 
-#newsletter .button {
+#contact .button {
 	display: inline-flex;
 	padding-bottom: 0;
 	margin: 0 0 30px 0;
 	border-style: solid;
 	border-width: 1px;
-	border-color: rgb(65,65,65);
+	border-color: rgb(80,80,80);
 	border-radius: 0;
-	background-color: rgb(190,190,190);
+	background-color: rgb(200,200,200);
 	width: 25%;
 	height: 40px;
-	box-shadow: 5px 5px 0 rgb(110,110,110);
+	box-shadow: 5px 5px 0 rgb(120,120,120);
 }
 
-#newsletter .button:hover {
+#contact .button:hover {
 	background-color: rgb(160,160,160);
 }
 
-#newsletter .button:active {
-	background-color: rgb(190,190,190);
+#contact .button:active {
+	background-color: rgb(200,200,200);
 }
 
-#newsletter .button p {
+#contact .button p {
 	display: inline-block;
 	line-height: 40px;
 	padding: 0;
@@ -142,14 +164,6 @@ h3 {
 a {
 	color: rgb(65,65,65);
 	text-decoration: underline;
-}
-
-nav a {
-	text-decoration: none;
-}
-
-nav li {
-	padding-right: 30px;
 }
 
 a:hover {
@@ -249,7 +263,15 @@ img {
 		display: inline-flex;
 		float: right;
 	}
-
+	
+	nav li {
+		padding-left: 20px;
+	}
+		
+	#heroImage section {
+		display: grid;
+	}
+	
 	#development {
 		display: grid;
 		grid-template-columns: 2fr 1fr; 
@@ -265,6 +287,7 @@ img {
 	}
 	
 	.fullWidth {
+		display: grid;
 		grid-template-areas:
 			'header header header'
 			'text text .'
@@ -332,12 +355,16 @@ img {
 		grid-template-columns: 1fr 2fr;
 	}
 	
-	#about, #newsletter {
+	#techSpecs div, #techSpecs ul, #techSpecs table {
+		padding-left: 0;
+	}
+	
+	#about, #contact {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 	
-	#about section, #newsletter section {
+	#about section, #contact section {
 		grid-column-start: 1;
 		grid-column-end: 3;
 	}
