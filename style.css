@@ -89,14 +89,15 @@ h3 {
 #newsletter .field {
 	display: inline-flex;
 	padding-bottom: 0;
-	margin: 0 5px 30px 0;
+	margin: 0 15px 30px 0;
 	border-style: solid;
 	border-width: 1px;
 	border-color: rgb(65,65,65);
-	border-radius: 6px;
+	border-radius: 0;
 	background-color: rgb(255,255,255);
 	width: 50%;
 	height: 40px;
+	box-shadow: 5px 5px 0 rgb(110,110,110);
 }
 
 #newsletter .field p {
@@ -114,10 +115,19 @@ h3 {
 	border-style: solid;
 	border-width: 1px;
 	border-color: rgb(65,65,65);
-	border-radius: 6px;
-	background-color: rgb(140,140,140);
+	border-radius: 0;
+	background-color: rgb(190,190,190);
 	width: 25%;
 	height: 40px;
+	box-shadow: 5px 5px 0 rgb(110,110,110);
+}
+
+#newsletter .button:hover {
+	background-color: rgb(160,160,160);
+}
+
+#newsletter .button:active {
+	background-color: rgb(190,190,190);
 }
 
 #newsletter .button p {
@@ -175,10 +185,6 @@ li {
 
 .stepComplete {
 	text-decoration: line-through;
-}
-
-.stepUpcoming {
-	color: rgb(200,200,200);
 }
 
 table {
@@ -246,14 +252,14 @@ img {
 
 	#development {
 		display: grid;
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 2fr 1fr; 
 	}
 	
 	#development h2 {
 		grid-column-start: 1;
-		grid-column-end: 4;
+		grid-column-end: 3;
 	}
-	
+
 	#features section {
 		display: grid;
 	}
@@ -300,6 +306,27 @@ img {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 	
+	#sale {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	
+	#sale h2 {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+	
+	#sale p {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	
+	#sale table {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-template-columns: 1fr 1fr;
+	}
+		
 	#techSpecs section {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
