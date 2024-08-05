@@ -414,7 +414,7 @@ img {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 	
-	#sale {
+	#sale section {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
