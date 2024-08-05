@@ -94,7 +94,7 @@ h3 {
 }
 
 #techSpecs {
-	background-color: rgb(241,241,241);
+	background: radial-gradient(ellipse, rgb(245,245,245) 50%, rgb(241,241,241));
 }
 
 #techSpecs h2, #techSpecs h3, #techSpecs div, #techSpecs ul, #techSpecs table {
@@ -146,21 +146,10 @@ input#mce-EMAIL.required.email, input#mce-EMAIL.required.email:focus-visible {
 	padding-left: 10px;
 	margin: 0 15px 15px 0;
 	font-family: "Source Sans 3", sans-serif;
-	width: 50%;
+	width: 75%;
 }
 
 div.optionalParent {
-}
-
-.field {
-	display: inline-flex;
-	padding-bottom: 0;
-}
-
-#contact .field p {
-	display: inline-block;
-	padding: 0 0 0 10px;
-	color: rgb(160,160,160);
 }
 
 input.button {
@@ -172,7 +161,7 @@ input.button {
 	border-color: rgb(80,80,80);
 	border-radius: 0;
 	background-color: rgb(230,230,230);
-	width: 25%;
+	width: 50%;
 	height: 40px;
 	box-shadow: 5px 5px 0 rgb(120,120,120);
 	line-height: 40px;
@@ -192,14 +181,14 @@ input.button:active {
 	background-color: rgb(230,230,230);
 }
 
-input.button p {
-	display: inline-block;
-	padding: 0;
-	margin: 0 auto;
+div.clear.foot p {
+	margin: 0;
+	width: 75%;
+	text-align: center;
 }
 
 img.refferal_badge {
-	opacity: 0.3;
+	opacity: 0.2;
 }
 
 a {
@@ -253,7 +242,7 @@ table {
 #sale table {
 	margin: 15px 0 30px 0;
 	padding: 30px 15px 15px 15px;
-	background-color: rgb(241,241,241);
+	background: radial-gradient(ellipse, rgb(245,245,245) 50%, rgb(241,241,241));
 	border-style: solid;
 	border-color: rgb(180,180,180);
 	border-width: 1px 0;
@@ -280,18 +269,37 @@ img {
 	margin: 0;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 500px) and (max-width: 699px) {
 	
-	.featureList ul{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		padding-bottom: 0;
+	p {
+		width: 66%;
+	}
+	
+	table {
+		grid-template-columns: 1fr 2fr;
 	}
 
-	.featureList li {
-		padding-bottom: 30px;
+	#sale table {
+		width: 66%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	input#mce-EMAIL.required.email, input#mce-EMAIL.required.email:focus-visible {
+		width: 50%;
 	}
 	
+	input.button {
+		width: 25%;
+	}
+
+	div.clear.foot p {
+		width: 50%;
+	}
+
+	
+}
+
 @media only screen and (min-width: 700px) {
 
 	body {
@@ -448,6 +456,18 @@ img {
 		display: block;
 	}
 
+	input#mce-EMAIL.required.email, input#mce-EMAIL.required.email:focus-visible {
+		width: 50%;
+	}
+	
+	input.button {
+		width: 25%
+	}
+
+	div.clear.foot p {
+		width: 50%;
+	}
+	
 }
 
 @media only screen and (min-width: 900px) {
