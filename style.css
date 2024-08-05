@@ -2,7 +2,7 @@ body {
 	background-color: rgb(245,245,245);
 	margin: 0;
 	padding: 15px;
-	color: rgb(65,65,65);
+	color: rgb(40,40,40);
 	font-family: "Source Sans 3", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
@@ -139,7 +139,7 @@ div.mc-field-group label {
 	padding-right: 15px;
 	line-height: 40px;
 	font-size: 18px;
-	color: rgb(65,65,65);
+	color: rgb(40,40,40);
 }
 
 input#mce-EMAIL.required.email, input#mce-EMAIL.required.email:focus-visible {
@@ -154,7 +154,7 @@ input#mce-EMAIL.required.email, input#mce-EMAIL.required.email:focus-visible {
 	margin-right: 15px;
 	line-height: 40px;
 	font-size: 18px;
-	color: rgb(65,65,65);
+	color: rgb(40,40,40);
 	padding-left: 10px;
 	margin: 0 15px 15px 0;
 	font-family: "Source Sans 3", sans-serif;
@@ -178,7 +178,7 @@ input.button {
 	box-shadow: 5px 5px 0 rgb(120,120,120);
 	line-height: 40px;
 	font-size: 18px;
-	color: rgb(65,65,65);
+	color: rgb(40,40,40);
 	font-family: "Source Sans 3", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
@@ -204,7 +204,7 @@ img.refferal_badge {
 }
 
 a {
-	color: rgb(65,65,65);
+	color: rgb(40,40,40);
 	text-decoration: underline;
 }
 
